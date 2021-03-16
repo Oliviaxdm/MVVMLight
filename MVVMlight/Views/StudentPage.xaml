@@ -1,0 +1,17 @@
+﻿<Window x:Class="MVVMlight.Views.StudentPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MVVMlight.Views"
+        mc:Ignorable="d"
+        Title="StudentPage" Height="450" Width="800"
+        DataContext="{Binding Source={StaticResource Locator},Path=Student}">
+    <Grid>
+        <TextBox Text="{Binding StudentModel.Id}" HorizontalAlignment="Left" Margin="31,10,0,0" VerticalAlignment="Top" Height="46" Width="104"/>
+        <TextBox Text="{Binding StudentModel.Name}" HorizontalAlignment="Left" Margin="31,72,0,0" VerticalAlignment="Top" Height="46" Width="104" RenderTransformOrigin="0.557,1.664"/>
+        <Button Content="Button" Command="{Binding AddDoneCommand}" HorizontalAlignment="Left" Height="38" Margin="31,141,0,0" VerticalAlignment="Top" Width="94"/>
+        <Label Content="{Binding StudentModel.FName}" HorizontalAlignment="Left" Height="60" Margin="53,217,0,0" VerticalAlignment="Top" Width="173"/>
+
+    </Grid>
+</Window>
